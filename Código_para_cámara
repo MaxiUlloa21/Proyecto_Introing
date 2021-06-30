@@ -1,3 +1,14 @@
+# importamos  las siguientes librerias para lograr activar la cámara
+import RPi.GPIO as GPIO
+import time
+import webbrowser
+
+
+#codigos para configurar la camara de la raspi y probarla
+sudo raspi-config
+sudo raspistill -o test.jpg
+
+
 # indicamos el uso de  la identificacion BCM para los GPIO
 GPIO.setmode(GPIO.BCM)
 # configuramos el pin 18 como entrada y activamos
@@ -13,7 +24,7 @@ while True:
     if input_state==False:
         webbrowser.open("https://meet.jit.si/proyectOo", new=0, autoraise=True)
         time.sleep(1)
-
+     
 #la manera de que al apretar un boton se prenda la raspi y si lo apreto nuevamente se apaga la camara
 #botón de encendido pi
 #Scripts utilizados en nuestra guía oficial del botón de encendido de Raspberry Pi .
