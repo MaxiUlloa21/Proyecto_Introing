@@ -1,1 +1,4 @@
+Conéctese a su Raspberry Pi a través de SSH
+Clonar este repositorio: git clone https://github.com/Howchoo/pi-power-button.git
+Ejecute el script de configuración: ./pi-power-button/script/install
 
