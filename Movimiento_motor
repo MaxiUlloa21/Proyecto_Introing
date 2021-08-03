@@ -1,60 +1,106 @@
-import time
 import RPi.GPIO as GPIO
+from time import sleep as delay
+
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-StepPins = [24,25,8,7]
-for pin in StepPins:
-        print("Setup pins")
-        GPIO.setup(pin,GPIO.OUT)
-        GPIO.output(pin, False)
-WaitTime = 0.001
-StepCount1 = 4
-Seq1 = []
-Seq1 = [i for i in range(0, StepCount1)]
-Seq1[0] = [1,0,0,0]
-Seq1[1] = [0,1,0,0]
-Seq1[2] = [0,0,1,0]
-Seq1[3] = [0,0,0,1]
-StepCount2 = 8
-Seq2 = []
-Seq2 = [i for i in range(0, StepCount2)]
-Seq2[0] = [1,0,0,0]
-Seq2[1] = [1,1,0,0]
-Seq2[2] = [0,1,0,0]
-Seq2[3] = [0,1,1,0]
-Seq2[4] = [0,0,1,0]
-Seq2[5] = [0,0,1,1]
-Seq2[6] = [0,0,0,1]
-Seq2[7] = [1,0,0,1]
-Seq = Seq2
-StepCount = StepCount2
-def steps(nb):
-        StepCounter = 0
-        if nb<0: sign=-1
-        else: sign=1
-        nb=sign*nb*2 #times 2 because half-step
-        print("nbsteps {} and sign {}".format(nb,sign))
-        for i in range(nb):
-                for pin in range(4):
-                        xpin = StepPins[pin]
-                        if Seq[StepCounter][pin]!=0:
-                                GPIO.output(xpin, True)
-                        else:
-                                GPIO.output(xpin, False)
-                StepCounter += sign
-                if (StepCounter==StepCount):
-                        StepCounter = 0
-                if (StepCounter<0):
-                        StepCounter = StepCount-1
-                time.sleep(WaitTime)
-nbStepsPerRev=2048
-if __name__ == '__main__' :
-    hasRun=False
-    while not hasRun:
-            steps(nbStepsPerRev)# parcourt un tour dans le sens horaire
-            time.sleep(1)
-            steps(-nbStepsPerRev)# parcourt un tour dans le sens anti-horaire
-            time.sleep(1)
-            hasRun=True
-    print("Stop motor")
-    for pin in StepPins:
-            GPIO.output(pin, False)
+
+MotorX = [24,25,8,7]
+PinX=[17]
+
+MotorY = [5,6,13,19]
+PinY=[27]
+
+StepCount = 8
+Seq = []
+Seq = [i for i in range(0, StepCount)]
+Seq[0] = [1,0,0,0]
+Seq[1] = [1,1,0,0]
+Seq[2] = [0,1,0,0]
+Seq[3] = [0,1,1,0]
+Seq[4] = [0,0,1,0]
+Seq[5] = [0,0,1,1]
+Seq[6] = [0,0,0,1]
+Seq[7] = [1,0,0,1]
+
+for pin in MotorY+MotorX:
+    GPIO.setup(pin,GPIO.OUT)
+    GPIO.output(pin, False)
+    
+for pin in PinX+PinY:
+    GPIO.setup(pin,GPIO.IN)
+
+
+class Movimiento():
+    
+    def star():
+        x=False
+        y=False
+        while True:
+            print("EJE X:")
+            print(GPIO.input(PinX[0]))
+            print("EJE Y:")
+            print(GPIO.input(PinY[0]))
+
+            if not GPIO.input(PinX[0]) and x==False:
+                Movimiento.MoveX(10)
+            else:
+                x=True
+
+            if not GPIO.input(PinY[0]) and y==False:
+                Movimiento.MoveY(10)
+            else:
+                y=True
+            if x==True and y==True:
+                break
+
+    def MoveX(Movimientos):
+        if Movimientos<0: 
+            sign=-1
+        else: 
+            sign=1
+        
+        Movimientos=sign*Movimientos*2
+        StepCounter=0
+        for i in range(Movimientos):
+            for pin in range(4):
+                    xpin = MotorX[pin]
+                    if Seq[StepCounter][pin]!=0:
+                            GPIO.output(xpin, True)
+                    else:
+                            GPIO.output(xpin, False)
+            StepCounter += sign
+
+            if (StepCounter==StepCount):
+                    StepCounter = 0
+            if (StepCounter<0):
+                    StepCounter = StepCount-1
+            delay(0.001)
+
+    def MoveY(Movimientos):
+        if Movimientos<0: 
+            sign=-1
+        else: 
+            sign=1
+        StepCounter=0
+        Movimientos=sign*Movimientos*2
+
+        for i in range(Movimientos):
+            for pin in range(4):
+                    xpin = MotorY[pin]
+                    if Seq[StepCounter][pin]!=0:
+                            GPIO.output(xpin, True)
+                    else:
+                            GPIO.output(xpin, False)
+            StepCounter += sign
+
+            if (StepCounter==StepCount):
+                    StepCounter = 0
+            if (StepCounter<0):
+                    StepCounter = StepCount-1
+            delay(0.001)
+    
+    def clear():
+        GPIO.cleanup()
+
+
+Movimiento.star()
