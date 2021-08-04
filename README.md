@@ -39,7 +39,7 @@ Boton_encendido_y_apagado
 Codigo_para_camara
 
 • tercero: montamos nuestros engranajes y motores
-ponemos en  funcionamiento tambien en el autoarranque nuestro codigo parra mover los mottores.
+ponemos en  funcionamiento tambien en el autoarranque nuestro codigo parra mover los motores.
 
 •cuarto:montamos nuestra copisandbox y estamos listos!
 
