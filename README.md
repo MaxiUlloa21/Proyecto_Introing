@@ -44,4 +44,6 @@ ponemos en  funcionamiento tambien en el autoarranque nuestro codigo parra mover
 
 •cuarto:montamos nuestra copisandbox  con todo lo anterior y guiandonos con la imagen y colocando nuestros iimanes estariamos listos!!
 ![WhatsApp Image 2021-08-04 at 00 11 55](https://user-images.githubusercontent.com/85243414/128126336-39c6857d-ad23-46b7-8be8-8241b637d715.jpeg)
+![WhatsApp Image 2021-08-04 at 00 14 36](https://user-images.githubusercontent.com/85243414/128126756-2f00873a-7697-4858-9821-b4782f8f72f6.jpeg)
+
 
