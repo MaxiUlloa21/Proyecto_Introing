@@ -26,16 +26,16 @@ También comenzara a encenderse y haciendo el mismo movimiento nuestra segunda r
 
 # Instalación y funcionamiento del programa
 •primero: Instalamos mongoDB en nuestra raspi(con ubuntu instalado)
-´´´
+
 instalar_ubuntu_y_mongoDB
-´´´
+
 •segundo:  configuramos nuestra camara y  gestionamos nuestros codigos para el boton y  nuestro arranque de raspi
 ejecutamos:
-´´´
+
 autoarranque 
 Boton_encendido_y_apagado
 Codigo_para_camara
-´´´ 
+
 • tercero: montamos nuestros engranajes y motores
 •cuarto:montamos nuestra copisandbox y estamos listos!
 
