@@ -1,0 +1,6 @@
+
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+@/usr/bin/chromium-browser https://meet.jit.si/proyectOo
+Control-o to save, Control-x to exit
+
+Logout and login to test your configuration. You can alternatively reboot the Raspberry Pi.
