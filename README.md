@@ -23,6 +23,7 @@
 # ¿Cómo Funciona?
 • Al presionar el boton prende nuestra raspberrypi4 , en unos instantes se ve en nuestra pantalla el inicio a nuestra videoconferencia  Y a la vez se prende nuestros 2 motores, y comienza a la vez a moverse nuestro imán en el movimiento que hace el engranaje. 
 También comenzara a encenderse y haciendo el mismo movimiento nuestra segunda raspberrypi4 que esta conectada al mismo servidor de mongoDB.
+Así creando entre ellas un mismo funcionamiento.
 
 # Instalación y funcionamiento del programa
 •primero: Instalamos mongoDB en nuestra raspi(con ubuntu instalado)
@@ -30,7 +31,7 @@ También comenzara a encenderse y haciendo el mismo movimiento nuestra segunda r
 instalar_ubuntu_y_mongoDB
 
 •segundo:  configuramos nuestra camara y  gestionamos nuestros codigos para el boton y  nuestro arranque de raspi
-ejecutamos:
+ejecutamos los siguientes codigos:
 
 autoarranque 
 
@@ -41,6 +42,6 @@ Codigo_para_camara
 • tercero: montamos nuestros engranajes y motores
 ponemos en  funcionamiento tambien en el autoarranque nuestro codigo parra mover los motores.
 
-•cuarto:montamos nuestra copisandbox  y estamos listos!!
+•cuarto:montamos nuestra copisandbox  con todo lo anterior y guiandonos con la imagen y colocando nuestros iimanes estariamos listos!!
 ![WhatsApp Image 2021-08-04 at 00 11 55](https://user-images.githubusercontent.com/85243414/128126336-39c6857d-ad23-46b7-8be8-8241b637d715.jpeg)
 
