@@ -33,9 +33,12 @@ instalar_ubuntu_y_mongoDB
 ejecutamos:
 
 autoarranque 
+
 Boton_encendido_y_apagado
+
 Codigo_para_camara
 
 • tercero: montamos nuestros engranajes y motores
+
 •cuarto:montamos nuestra copisandbox y estamos listos!
 
