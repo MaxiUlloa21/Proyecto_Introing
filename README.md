@@ -26,12 +26,12 @@ También comenzara a encenderse y haciendo el mismo movimiento nuestra segunda r
 Así creando entre ellas un mismo funcionamiento.
 
 # Instalación y funcionamiento del programa
-•primero: Instalamos mongoDB en nuestra raspi(con ubuntu instalado)
+•Primero: Instalamos mongoDB en nuestra raspi(con ubuntu instalado)
 
 instalar_ubuntu_y_mongoDB
 
-•segundo:  configuramos nuestra camara y  gestionamos nuestros codigos para el boton y  nuestro arranque de raspi
-ejecutamos los siguientes codigos:
+•Segundo:  Configuramos nuestra cámara y  gestionamos nuestros códigos para el botón y  nuestro arranque de raspi
+ejecutamos los siguientes códigos:
 
 autoarranque 
 
@@ -39,10 +39,10 @@ Boton_encendido_y_apagado
 
 Codigo_para_camara
 
-• tercero: montamos nuestros engranajes y motores
+• Tercero: Montamos nuestros engranajes y motores
 ponemos en  funcionamiento tambien en el autoarranque nuestro codigo parra mover los motores.
 
-•cuarto:montamos nuestra copisandbox  con todo lo anterior y guiandonos con la imagen y colocando nuestros iimanes estariamos listos!!
+•Cuarto:Montamos nuestra copisandbox  con todo lo anterior y guiándonos con la imagen y colocando nuestros imanes estaríamos listos!!
 ![WhatsApp Image 2021-08-04 at 00 11 55](https://user-images.githubusercontent.com/85243414/128126336-39c6857d-ad23-46b7-8be8-8241b637d715.jpeg)
 ![WhatsApp Image 2021-08-04 at 00 14 36](https://user-images.githubusercontent.com/85243414/128126756-2f00873a-7697-4858-9821-b4782f8f72f6.jpeg)
 
