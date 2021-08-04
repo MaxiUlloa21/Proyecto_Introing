@@ -21,6 +21,21 @@
 •	Proyecto realizado por nuestro grupo para la asignatura IWG101 que consiste en un sistema comunicacional entre cajas, donde se ve la replicación de movimientos superficiales. Cada caja contiene arena (material granulado y fácil de manipular), una pantalla táctil, una raspberry pi y un sistema de engranajes y reglas que ayudan en el proceder de la mímica de un movimiento.
 
 # ¿Cómo Funciona?
+• Al presionar el boton prende nuestra raspberrypi4 , en unos instantes se ve en nuestra pantalla el inicio a nuestra videoconferencia  Y a la vez se prende nuestros 2 motores, y comienza a la vez a moverse nuestro imán en el movimiento que hace el engranaje. 
+También comenzara a encenderse y haciendo el mismo movimiento nuestra segunda raspberrypi4 que esta conectada al mismo servidor de mongoDB.
 
 # Instalación y funcionamiento del programa
+•primero: Instalamos mongoDB en nuestra raspi(con ubuntu instalado)
+´´´
+instalar_ubuntu_y_mongoDB
+´´´
+•segundo:  configuramos nuestra camara y  gestionamos nuestros codigos para el boton y  nuestro arranque de raspi
+ejecutamos:
+´´´
+autoarranque 
+Boton_encendido_y_apagado
+Codigo_para_camara
+´´´ 
+• tercero: montamos nuestros engranajes y motores
+•cuarto:montamos nuestra copisandbox y estamos listos!
 
